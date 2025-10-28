@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>KIRA</title>
+  <link rel="icon" href="img/bot_logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@400;500;600&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      background: #f9f9fc;
+      overflow: hidden;
+      position: relative;
+    }
+
+    button {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  label, input, select {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .footer {
+    font-family: 'Poppins', sans-serif;
+  }
+
+    /* 🌈 Glowing gradient shapes */
+    body::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -100px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(167, 139, 250, 0.35) 0%, transparent 70%);
+      filter: blur(100px);
+      z-index: 0;
+      animation: float1 10s ease-in-out infinite alternate;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(147, 51, 234, 0.25) 0%, transparent 70%);
+      filter: blur(120px);
+      z-index: 0;
+      animation: float2 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes float1 {
+      from {
+        transform: translateY(0px);
+      }
+
+      to {
+        transform: translateY(30px);
+      }
+    }
+
+    @keyframes float2 {
+      from {
+        transform: translateY(0px);
+      }
+
+      to {
+        transform: translateY(-30px);
+      }
+    }
+
+    
+    /* 🌟 Side Taglines */
+    .side {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      color: #6d28d9;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .side.left {
+        position: absolute;
+        top: 50%;
+        left: -162px;
+        transform: translateY(-50%) rotate(90deg);
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        background: rgb(125 13 171 / 70%);
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 600;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        width: 370px;
+    }
+   .side.right {
+        position: absolute;
+        top: 50%;
+        right: -160px;
+        transform: translateY(-50%) rotate(90deg);
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        background: rgb(125 13 171 / 70%);
+        color: #ffffff;
+        padding: 12px 28px;
+        font-size: 15px;
+        font-weight: 600;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* Optional hover effect */
+    .side.right:hover {
+    background: #8b5cf6;
+    }
+
+
+    .side span {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    @media (max-width: 992px) {
+      .side {
+        display: none;
+      }
+    }
+
+    /* 🌟 Login Box */
+    .login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px 36px;
+      border-radius: 16px;
+      width: 360px;
+      box-shadow: 0 8px 30px rgba(140, 100, 200, 0.15);
+      animation: fadeIn 0.8s ease-in-out;
+      border: 1px solid rgba(180, 150, 255, 0.2);
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 2;
+    }
+
+    .login-title {
+       font-family: 'Orbitron', sans-serif;
+        font-size: 26px;
+        text-align: center;
+        font-weight: 700;
+        color: #4a0f88;
+        letter-spacing: 1px;
+        margin-bottom: 28px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-title span {
+      background: linear-gradient(90deg, rgb(107 39 135 / 76%), #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #5a5a5a;
+    }
+
+    select,
+    input {
+      width: 93%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #f8f6ff;
+      color: #333;
+      outline: none;
+      transition: border 0.2s, background 0.2s;
+    }
+
+    select:focus,
+    input:focus {
+      border-color: rgb(107 39 135 / 76%);
+      background: #ffffff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      background: rgb(125 13 171 / 70%);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: rgb(116, 24, 153);
+      transform: translateY(-1px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+    }
+
+    /* 🎯 Custom Dropdown */
+    .custom-dropdown {
+      position: relative;
+      width: 100%;
+      user-select: none;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .selected {
+      padding: 10px 16px;
+      background: #f8f6ff;
+      color: #333;
+      border-radius: 12px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      transition: all 0.3s ease;
+    }
+
+    .selected:hover {
+      border-color: #a970ff;
+      background: #f0e9ff;
+    }
+
+    .options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 12px;
+      margin-top: 6px;
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      z-index: 10;
+    }
+
+    .options div {
+      padding: 10px 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+      color: #333;
+    }
+
+    .options div:hover {
+      background: rgba(158, 65, 194, 0.76);
+      color: #fff;
+    }
+
+    /* Loader */
+    .loader-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.85);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      display: none;
+      backdrop-filter: blur(8px) saturate(160%);
+    }
+
+    .loader {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 6px solid rgba(140, 100, 200, 0.2);
+      border-top: 6px solid #8b5cf6;
+      animation: spin 1s linear infinite;
+    }
+
+    .loader-text {
+      margin-top: 16px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #5a32a3;
+      opacity: 0.9;
+      animation: fade 2s infinite;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fade {
+
+      0%,
+      100% {
+        opacity: 0.5;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+   <div class="side left">
+    <h2 style="display: flex; justify-content: center;">Welcome to <img src="img/bot_logo.png" alt="HR Assistant Logo" class="sidebar-logo" style="width: 30px; height: 30px;margin-left: 4px; margin-right: 4px; margin-top: -6px; filter: brightness(0) invert(1);" />  <span>KIRA.AI ChatBot</span></h2>
+  </div>
+  <div class="side right">
+    ✨ Smart AI.Bot Powered by @KIRA.
+  </div>
+
+  <!-- Login Box -->
+  <div class="login-container">
+    <h2 class="login-title">SIGN IN TO  <img src="img/bot_logo.png" alt="HR Assistant Logo" class="sidebar-logo" style="width: 30px; height: 30px;margin-left: 10px; margin-right: 4px;" /> <span>KIRA.AI</span></h2>
+    <form id="login_form">
+      <div class="custom-dropdown">
+        <div class="selected" id="login_role">Select Role</div>
+        <div class="options">
+          <div data-value="developer">Developer</div>
+          <div data-value="qa">QA</div>
+          <div data-value="client">Client</div>
+          <div data-value="admin">Admin</div>
+        </div>
+      </div>
+
+      <label>Email / Username</label>
+      <input type="text" id="login_email" placeholder="Enter Email or Username" required>
+
+      <label>Password</label>
+      <input type="password" id="login_password" placeholder="Enter Password" required>
+
+      <button type="submit">Continue</button>
+    </form>
+    <div class="footer">© 2025 KIRA.AI All rights reserved.</div>
+  </div>
+
+  <script>
+    const dropdown = document.querySelector('.custom-dropdown');
+    const selected = dropdown.querySelector('.selected');
+    const options = dropdown.querySelector('.options');
+
+    selected.addEventListener('click', () => {
+      options.style.display = options.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    options.querySelectorAll('div').forEach(option => {
+      option.addEventListener('click', () => {
+        selected.textContent = option.textContent;
+        selected.dataset.value = option.dataset.value;
+        options.style.display = 'none';
+        localStorage.setItem('login_role', option.dataset.value);
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if (!dropdown.contains(e.target)) options.style.display = 'none';
+    });
+
+    document.getElementById("login_form").onsubmit = async function (e) {
+      e.preventDefault();
+      const loader = document.getElementById("loader");
+      loader.style.display = "flex";
+
+      const payload = {
+        role: document.getElementById("login_role").dataset.value,
+        email: document.getElementById("login_email").value,
+        password: document.getElementById("login_password").value
+      };
+
+      try {
+        const res = await fetch("http://127.0.0.1:8000/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+        loader.style.display = "none";
+
+        if (data.error) {
+          alert("Login failed: " + data.error);
+          return;
+        }
+
+        localStorage.setItem("role", data.role);
+        localStorage.setItem("user_id", data.user_id);
+        localStorage.setItem("employee_id", data.employee_id);
+        localStorage.setItem("login_password", document.getElementById("login_password").value);
+
+        window.location.href = "index.html";
+      } catch (err) {
+        loader.style.display = "none";
+        alert("Something went wrong: " + err.message);
+      }
+    };
+  </script>
+
+  <!-- Loader -->
+  <div class="loader-overlay" id="loader">
+    <div class="loader"></div>
+    <div class="loader-text">Signing you in…</div>
+  </div>
+</body>
+
+</html>

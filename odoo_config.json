@@ -1,0 +1,7 @@
+{
+    "ODOO_URL": "http://localhost:8060/jsonrpc",
+    "ODOO_DB": "HRMS1",
+    "ODOO_USERNAME": "admin",
+    "ODOO_PASSWORD": "admin",
+    "ODOO_DB_URL": "postgresql://openpg:openpgpwd@localhost:5432/HRMS1"
+}

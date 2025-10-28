@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+answer_audios/
+generated_excels/
+model/
+uploaded_images/
+.history/
