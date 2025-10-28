@@ -1,7 +1,7 @@
 <h1 align="center">🤖 KIRA.AI – Smart HR & Business Chatbot</h1>
 
 <p align="center">
-    <img width="952" height="437" alt="Screenshot 2025-10-28 171058" src="https://github.com/user-attachments/assets/764ef6b7-8586-441b-b903-c91ae1767d41" />
+    <img width="436" height="235" alt="Screenshot 2025-10-28 175600" src="https://github.com/user-attachments/assets/f0d28528-236a-4002-950f-87d5570df900" />
 </p>
 
 <p align="center">
