@@ -76,7 +76,9 @@ It provides both **text and voice-based** interaction modes, seamlessly integrat
 
 | Chat Interface | Voice Query | Configuration | Excel Report |
 |:----------------:|:------------:|:---------------:|:---------------:|
-| <img width="959" height="537" alt="Screenshot 2025-10-28 173519" src="https://github.com/user-attachments/assets/712bdfa7-5fbd-49b6-b1c7-af31c8e099c7" /> | ![Voice](https://via.placeholder.com/300x180?text=Voice+Query) | ![Config](https://via.placeholder.com/300x180?text=Configuration) | ![Report](https://via.placeholder.com/300x180?text=Excel+Report) |
+| <img width="959" height="537" alt="Screenshot 2025-10-28 173519" src="https://github.com/user-attachments/assets/712bdfa7-5fbd-49b6-b1c7-af31c8e099c7" /> | ![Voice](https://via.placeholder.com/300x180?text=Voice+Query) | <img width="958" height="436" alt="Screenshot 2025-10-28 175123" src="https://github.com/user-attachments/assets/df9b381a-ae57-45ac-a0cc-8379d32b3d22" /> <img width="585" height="368" alt="Screenshot 2025-10-28 175329" src="https://github.com/user-attachments/assets/2bb45fa2-f489-4a27-8e78-0fc236f5fc06" /> <img width="476" height="301" alt="Screenshot 2025-10-28 175418" src="https://github.com/user-attachments/assets/df881d22-e21f-411d-8c6d-58ab55f77d60" />
+
+ | ![Report](https://via.placeholder.com/300x180?text=Excel+Report) |
 
 ---
 
