@@ -11,6 +11,9 @@
 
 ---
 
+## 🎥 Project Demo Video
+[Watch Demo on LinkedIn](https://www.linkedin.com/posts/kasam-ali-mukhi-712902249_part-1-im-excited-to-share-something-activity-7399019195008552960-eNDC?utm_source=share&utm_medium=member_android&rcm=ACoAAD2JTX4BlaF_KtDMwQTLp6SNrje1GVnZ6bk)
+
 ## ✨ Overview
 
 **KIRA.AI** simplifies HR and business communication using **FastAPI**, **PostgreSQL**, and **Generative AI**.  
